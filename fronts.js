@@ -9,15 +9,10 @@ class SLL {
         this.head = null;
     }
     addFront(val) {
-        let new_node = new Node(val);
-
-        if(!this.head) {
-            this.head = new_node;
-            return this;
-        }
-        new_node.next = this.head;
-        this.head = new_node;
-        return this;
+        let newNode = new Node(val);
+        newNode.next = this.head;
+        this.head = newNode;
+        return this.head;
     }
     removeFront() {
         if(this.head == null) {
@@ -33,7 +28,8 @@ class SLL {
             return null;
         }
         else {
-            return this.head.value;
+            console.log(this.head.data)
+            return this.head.data;
         }
     }
 }
@@ -44,3 +40,7 @@ SLL1.addFront(5)
 SLL1.addFront(73)
 SLL1.removeFront()
 console.log(SLL1)
+console.log(SLL1.head)
+SLL1.front()
+
+
