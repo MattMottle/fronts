@@ -32,6 +32,17 @@ class SLL {
             return this.head.data;
         }
     }
+    display() {
+        let runner = this.head
+            let myList = []
+
+            while(runner !== null){
+                myList.push(runner.data) 
+                runner=runner.next
+            }
+            myList = myList.join(",")
+            return myList;
+    }
 }
 
 SLL1 = new SLL()
@@ -42,5 +53,9 @@ SLL1.removeFront()
 console.log(SLL1)
 console.log(SLL1.head)
 SLL1.front()
+SLL1.addFront(7)
+SLL1.addFront(9)
+SLL1.addFront(11)
+console.log(SLL1.display())
 
 
